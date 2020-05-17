@@ -1,7 +1,7 @@
 plugins {
-    id("com.android.application")
-    kotlin("android")
-    kotlin("android.extensions")
+    id(BuildScript.AndroidApplication)
+    id(BuildScript.KotlinAndroid)
+    id(BuildScript.KotlinAndroidExtensions)
 }
 
 android {
@@ -28,7 +28,8 @@ android {
 }
 
 dependencies {
-    implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.3.71")
+    implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk7:${PluginsVersions.kotlin}")
+
     implementation("androidx.appcompat:appcompat:1.1.0")
     implementation("androidx.core:core-ktx:1.2.0")
     implementation("androidx.constraintlayout:constraintlayout:1.1.3")
