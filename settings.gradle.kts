@@ -1,2 +1,2 @@
 rootProject.name="ExternalDaggerComponent"
-include(":Sample")
+include(":App:Sample")
