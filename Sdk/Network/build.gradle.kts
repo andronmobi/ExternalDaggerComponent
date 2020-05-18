@@ -1,7 +1,7 @@
 plugins {
     id(BuildScript.AndroidLibrary)
     id(BuildScript.KotlinAndroid)
-    id(BuildScript.KotlinAndroidExtensions)
+    id(BuildScript.Kapt)
 }
 
 android {
@@ -22,5 +22,14 @@ android {
 }
 
 dependencies {
-    implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk7:${PluginsVersions.kotlin}")
+
+    kapts(
+        "com.google.dagger:dagger-android-processor:2.27",
+        "com.google.dagger:dagger-compiler:2.27"
+    )
+
+    implementations(
+        "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${PluginsVersions.kotlin}",
+        "com.google.dagger:dagger:2.27"
+    )
 }
