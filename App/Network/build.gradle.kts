@@ -32,4 +32,8 @@ dependencies {
         "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${PluginsVersions.kotlin}",
         "com.google.dagger:dagger:2.27"
     )
+
+    implementationProjects(
+        ":Sdk:Network"
+    )
 }
