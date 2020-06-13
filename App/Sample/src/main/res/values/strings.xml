@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">ExternalDaggerComponent</string>
+    <string name="facebook_app_id">952800064839959</string>
+    <string name="fb_login_protocol_scheme">fb952800064839959</string>
 </resources>
