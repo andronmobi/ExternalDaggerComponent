@@ -40,7 +40,8 @@ dependencies {
         "androidx.appcompat:appcompat:1.1.0",
         "androidx.core:core-ktx:1.2.0",
         "androidx.constraintlayout:constraintlayout:1.1.3",
-        "com.facebook.android:facebook-login:[5,6)"
+        "com.facebook.android:facebook-login:[5,6)",
+        "com.squareup.okhttp3:okhttp:4.7.2"
     )
     implementationProjects(
         ":Sdk:Network"
