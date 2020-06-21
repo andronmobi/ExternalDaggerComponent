@@ -2,6 +2,7 @@ plugins {
     id(BuildScript.AndroidApplication)
     id(BuildScript.KotlinAndroid)
     id(BuildScript.KotlinAndroidExtensions)
+    id(BuildScript.Kapt)
 }
 
 android {
@@ -35,15 +36,24 @@ dependencies {
         "androidx.test.espresso:espresso-core:3.2.0"
     )
 
+    kapts(
+        "com.google.dagger:dagger-android-processor:2.27",
+        "com.google.dagger:dagger-compiler:2.27"
+    )
+
     implementations(
         "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${PluginsVersions.kotlin}",
         "androidx.appcompat:appcompat:1.1.0",
         "androidx.core:core-ktx:1.2.0",
         "androidx.constraintlayout:constraintlayout:1.1.3",
         "com.facebook.android:facebook-login:[5,6)",
+        "com.google.dagger:dagger:2.27",
+        "com.google.code.gson:gson:2.8.5",
         "com.squareup.okhttp3:okhttp:4.7.2"
     )
     implementationProjects(
+        ":App:Core",
+        ":Sdk:Core",
         ":Sdk:Network"
     )
 }
